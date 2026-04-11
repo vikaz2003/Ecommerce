@@ -1,32 +1,71 @@
 import React from 'react'
+import { Store,CircleDollarSign,BriefcaseBusiness,BadgeDollarSign} from 'lucide-react'
+import Card from './Card'
+import Info from'./Info'
 
 function About() {
   return (
-       
-        <div className='flex flex-col mt-20'>
-            <div className='flex flex-row justify-between p-3'>
-                 <div className='flex flex-col gap-6 max-w-[600px] align-middle bg-red-600'>
-                       <h1 className="text-3xl font-semibold text-center">
+       <div>
+       <div className='grid md:grid-cols-2 grid-cols-1 mt-25 p-3 gap-12'>
+                
+                <div className='flex justify-center items-center relative right-10'>
+                    <div className='flex flex-col space-y-4 relative bottom-6'>
+                         <h1 className='text-[35px] font-semibold leading-tight mb-6'>
                             Our Story
-                       </h1>
-                      <div className='flex flex-col text-center items-center gap-6'>
-                         <p className="text-gray-600 text-sm leading-6">
-    Launched in 2015, Exclusive is South Asia’s premier online shopping marketplace with an active presence in Bangladesh. Supported by a wide range of tailored marketing, data and service solutions, Exclusive has 10,500 sellers and 300 brands and serves 3 million customers across the region.
-  </p>
-                         <p className="text-gray-600 text-sm leading-6">
-    Exclusive has more than 1 million products to offer, growing at a very fast pace. Exclusive offers a diverse assortment in categories ranging from consumer.
-  </p>
+                         </h1>
+                         <span>
+                         <span className='block text-md '>
+                          Launced in 2015, Exclusive is South Asia’s premier online shopping
+                         </span>
+                         <span className='block text-md '>
+                          makterplace with an active presense in Bangladesh. Supported 
+                         </span>
+                         <span className='block text-md '>
+                          by wide range of tailored marketing, data and service solutions,
+                         </span>
+                         <span className='block text-md '>
+                          Exclusive has 10,500 sallers and 300 brands and serves 3 
+                         </span>
+                         <span className='block text-md '>
+                          millioons customers across the region. 
+                         </span>
+                         </span>
+                         <span>
+                          <span className='block text-md '>
+                          Exclusive has more than 1 Million products to offer, growing at a
+                          </span>
+                         <span className='block text-md '>
+                          very fast. Exclusive offers a diverse assotment in categories 
+                         </span>
+                         <span className='block text-md '>
+                          ranging  from consumer.
+                         </span>
+                        </span>
+                    </div>
+                </div>
+                <div className='w-full'>
+                    <img src="images/side_image.png" alt=""  className='h-[450px] w-auto'/>
+                </div>
 
-                      </div>
-                 </div>
-                 <img src="/images/side_image.png" className='w-150 h-85'/>
-               <div>
 
-                 </div>
+        </div>
+
+        <div className='mt-6 p-20 pr-30 pl-30 '>
+            <div className='grid sm:grid-cols-4 grid-cols-2 gap-4'>
+                  <Card text1="10.5k" text2="Sellers active our site" Icon={Store}/>
+                  <Card text1="33k" text2="Monthly Product Sales" Icon={CircleDollarSign}/>
+                  <Card text1="45.5k" text2="Sellers active our site" Icon={BriefcaseBusiness}/>
+                  <Card text1="25k" text2="Annaul gross sale in ourr site" Icon={BadgeDollarSign}/>
             </div>
+        </div>
+
+        <div className='grid sm:grid-cols-3 grid-cols-1'>
+             <Info></Info>
+        </div>
+
 
         </div>
   )
-}
+} 
 
 export default About

@@ -76,7 +76,7 @@ function Login() {
                               <div className='flex flex-row gap-x-20 items-center mt-10'>
                             
                               <button type="submit" className="bg-red-400  py-4 px-8 text-white text-lg font-semibold shadow-md hover:bg-red-600 transition duration-200  text-center rounded-xl">Log In</button>
-                              <p className='text-center hover:text-red-800 '>Forgot Password?</p>
+                              <p className='text-center hover:text-red-800 cursor-pointer'>Forgot Password?</p>
                               </div>
                         </form>
                    </div>

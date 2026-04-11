@@ -21,8 +21,8 @@ function NavBar() {
             <NavLink className='text-black' to='/signup'>Sign Up</NavLink>
         </div>
         <div className='flex flex-row gap-4 items-center ml-45'>
-             <div className='bg-gray-400 flex p-2  gap-4 mx-4 my-auto items-center text-m w-65 rounded-md '>
-                  <input type="text" placeholder='What are you looking for?' value={text} onChange={(e)=>setText(e.target.value)} className=" outline-none text-sm text-white bg-transparent w-[75%] p-2" />
+             <div className='bg-gray-200 flex p-2  gap-4 mx-4 my-auto items-center text-m w-65 rounded-md '>
+                  <input type="text" placeholder='What are you looking for?' value={text} onChange={(e)=>setText(e.target.value)} className=" outline-none text-sm text-black bg-transparent w-[75%] p-2" />
                   <SearchIcon className='cursor-pointe' onClick={()=>console.log(text)}/>
                   
              </div>

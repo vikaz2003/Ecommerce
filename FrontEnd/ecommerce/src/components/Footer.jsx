@@ -14,7 +14,10 @@ function Footer() {
 
 
   return (
-    <div className='bg-black text-white mt-20 flex flex-row justify-between pt-10 pl-5 pb-20 pr-5 w-full gap-x-5'>
+    <div className='bg-black text-white mt-20  pt-10 pl-5 pb-20 pr-5 w-full h-[400px]'>
+        <div className='flex justify-between space-x-5'>
+
+        
            <div className='flex flex-col gap-4 text-white max-w-xs'>
 
                <p className='text-lg font-semibold'>Exclusive</p>
@@ -57,13 +60,16 @@ function Footer() {
            <div className='flex flex-col gap-3'>
                <p className='text-lg font-semibold'>Download App</p>
                <p className='text-sm text-gray-400'>Save $3 with App New User Only</p>
-               <div className='flex flex-row items-center gap-0.5 '>
+               <div className='flex flex-row items-center gap-1 '>
                     <div>
                        <QRCodeCanvas value="https://yourapp.com" size={96} className=' p-1 rounded' />
                     </div>
-                    <div className='flex flex-col h-24 gap-1'>
-                         <img src="https://storage.googleapis.com/pe-portal-consumer-prod-wagtail-static/images/googleplay-badge-01-getit.width-1440.png?X-Goog-Algorithm=GOOG4-RSA-SHA256&X-Goog-Credential=wagtail%40pe-portal-consumer-prod.iam.gserviceaccount.com%2F20260405%2Fauto%2Fstorage%2Fgoog4_request&X-Goog-Date=20260405T092930Z&X-Goog-Expires=86400&X-Goog-SignedHeaders=host&X-Goog-Signature=41e07255aa899ea347280c2b71bde26066fafb9aec7c19fe04486d1111d798a2214ab314b1cfaa5378e707491f55aa6e01d100683cc30276984155944014d73e2b6330914a29c96685ad378394a1afe81de0cf0c29ce1c2fa98f84fdb821a4a9b1833ac6946aad15fc1294ac7e01ce1686803704c0f22d8b0c458b6960349653f5d3018deb4f31069aadcfce23357334260fde275e36efe85a16e625038a0ef9120ea8b6f4ff06679fad5d1c518bd782b3acff4f2d4e5a69eb4fcd32cc3182bacf19daa7f934af021dc5d4c383268393813f679c27b4267de64ff682c70fb00ce590db698e6fb94cd241633fe20b205eb3a2a4dfe89bc0f51b7d4a307f5eeb16" 
-                         alt="Google Icon" className="w-32 object-contain rounded  h-[45%]"/>
+                    <div className='flex flex-col h-24 gap-2 items-center justify-center'>
+                        <img 
+                             src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
+                             alt="Get it on Google Play"
+                             className="object-contain rounded h-5 w-auto"
+                        />
                          <img src="https://developer.apple.com/app-store/marketing/guidelines/images/badge-pre-order-on-the-app-store.svg" 
                          alt="Apple Icon" className="h-5 w-auto object-contain"/>
                     </div>
@@ -75,7 +81,15 @@ function Footer() {
                    <FaLinkedinIn className="cursor-pointer hover:text-gray-400" />
                </div>
            </div>
+        </div>
+
+           <div className='w-full text-center justify-center mt-25  mb-5 gap-x-1 flex'>
+               <span className='text-gray-400 text-md relative top-0.125'>©</span>
+                <span className='text-gray-400 text-sm'>Copyright Rimel 2022. All right reserved</span>
+           </div>
     </div>
+
+    
   )
 }
 

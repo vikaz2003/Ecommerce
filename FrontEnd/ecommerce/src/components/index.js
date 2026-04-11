@@ -3,5 +3,7 @@ import Footer from "./Footer";
 import Body from "./Body";
 import Signup from './Signup';
 import Login from "./Login";
+import Contact from "./Contact";
+import About from "./About";
 
-export {NavBar, Footer, Body,Signup,Login}
+export {NavBar, Footer, Body,Signup,Login,Contact,About}
