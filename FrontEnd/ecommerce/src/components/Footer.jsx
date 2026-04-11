@@ -83,7 +83,7 @@ function Footer() {
            </div>
         </div>
 
-           <div className='w-full text-center justify-center mt-25  mb-5 gap-x-1 flex'>
+           <div className='w-full text-center justify-center mt-20 mb-0 gap-x-1 flex'>
                <span className='text-gray-400 text-md relative top-0.125'>©</span>
                 <span className='text-gray-400 text-sm'>Copyright Rimel 2022. All right reserved</span>
            </div>

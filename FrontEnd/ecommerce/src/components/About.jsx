@@ -1,7 +1,8 @@
 import React from 'react'
-import { Store,CircleDollarSign,BriefcaseBusiness,BadgeDollarSign} from 'lucide-react'
+import { Store,CircleDollarSign,BriefcaseBusiness,BadgeDollarSign,Truck,ShieldCheck,Headset} from 'lucide-react'
 import Card from './Card'
 import Info from'./Info'
+import Foot from './Foot'
 
 function About() {
   return (
@@ -59,10 +60,19 @@ function About() {
             </div>
         </div>
 
-        <div className='grid sm:grid-cols-3 grid-cols-1'>
-             <Info></Info>
+        <div className='grid sm:grid-cols-3 grid-cols-1 gap-2 sm:gap-4 px-4 pl-30 mt-10'>
+             <Info src="/images/tom_cruise.png" name="Tom Cruise" role="Founder & Chairman"/>
+             <Info src="/images/emma_watson.png" name="Emma Watson" role="Managing Director"/>
+             <Info src="/images/will_smith.png" name="Will Smith" role="Product Designer"/>
         </div>
+        
 
+        <div className='grid sm:grid-cols-3 ml-50 mt-30 justify-between '>
+             <Foot Icon={Truck} heading="FREE AND FAST DELIVERY" note="Free delivery for all orders over $140"/>
+             <Foot Icon={Headset} heading="24/7 CUSTOMER SERVICE" note="Friendly 24/7 customer support"/>
+             <Foot Icon={ShieldCheck} heading="MONEY BACK GUARANTEE" note="We return money within 30 days"/>
+             
+        </div>
 
         </div>
   )
