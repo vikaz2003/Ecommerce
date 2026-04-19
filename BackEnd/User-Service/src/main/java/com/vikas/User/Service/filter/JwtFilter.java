@@ -25,22 +25,22 @@ public class JwtFilter extends OncePerRequestFilter {
     @Override
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response,
                                     FilterChain filterChain) throws ServletException, IOException {
-        String authHeader=request.getHeader("Authorization");
-        String token=null;
-        Long userId=null;
-        try{
-            if(authHeader!=null && authHeader.startsWith("Bearer ")){
-                token=authHeader.substring(7);
-                userId=jwtUtil.extractUserId(token);
-                UsernamePasswordAuthenticationToken authentication=new UsernamePasswordAuthenticationToken(userId,null, Collections.emptyList());
-                SecurityContextHolder.getContext().setAuthentication(authentication);
-            }
+            String authHeader=request.getHeader("Authorization");
+            String token=null;
+            Long userId=null;
+            try{
+                if(authHeader!=null && authHeader.startsWith("Bearer ")){
+                    token=authHeader.substring(7);
+                    userId=jwtUtil.extractUserId(token);
+                    UsernamePasswordAuthenticationToken authentication=new UsernamePasswordAuthenticationToken(userId,null, Collections.emptyList());
+                    SecurityContextHolder.getContext().setAuthentication(authentication);
+                }
 
-            if(userId!=null && jwtUtil.validateToken(token)){
-                request.setAttribute("userId",userId);
+                if(userId!=null && jwtUtil.validateToken(token)){
+                    request.setAttribute("userId",userId);
 
-            }
-        }catch(Exception e){
+                }
+            }catch(Exception e){
             logger.error("JWT Token Validation error: "+e.getMessage());
         }
 
