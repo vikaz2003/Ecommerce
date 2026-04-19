@@ -14,7 +14,7 @@ function Footer() {
 
 
   return (
-    <div className='bg-black text-white mt-20  pt-10 pl-5 pb-20 pr-5 w-full h-[400px]'>
+    <div className='bg-black text-white mt-20  pt-10 pl-5 pr-5 w-full'>
         <div className='flex justify-between space-x-5'>
 
         
@@ -83,7 +83,7 @@ function Footer() {
            </div>
         </div>
 
-           <div className='w-full text-center justify-center mt-20 mb-0 gap-x-1 flex'>
+           <div className='w-full text-center justify-center mt-20  gap-x-1 flex mb-10'>
                <span className='text-gray-400 text-md relative top-0.125'>©</span>
                 <span className='text-gray-400 text-sm'>Copyright Rimel 2022. All right reserved</span>
            </div>

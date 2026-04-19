@@ -6,11 +6,13 @@ import { Outlet } from 'react-router-dom'
 function App() {
   
   return (
-    <>
+    <div className='min-h-screen flex flex-col'>
+      <div className='grow'>
       <NavBar/>
       <Outlet/>
+       </div>
       <Footer/>
-    </>
+    </div>
   )
 }
 
