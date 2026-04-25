@@ -9,8 +9,8 @@ function SignBox() {
     const [email,setEmail]=useState('')
     const [password,setPassword]=useState('')
     const [error,setError]=useState('')
-   
     const navigate=useNavigate()
+
     const handleSubmit=(e)=>{
          e.preventDefault();
          console.log("clicked")
@@ -42,8 +42,16 @@ function SignBox() {
          })
          .catch((err)=>{
             console.log(err);
-            if(err.responmse)
+            if(err.response && err.response.data){
+                 setError(err.response.data)
+            }else{
+              setError("Something went wrong")
+            }
          })
+    }
+
+    const oAuth2Login=(e)=>{
+        console.log("Clicked ")
     }
 
 
@@ -101,7 +109,7 @@ function SignBox() {
              className="w-5 h-5"
          />
 
-        <p className="text-sm">Sign up with Google</p>
+        <button className="text-sm" onClick={()=>oAuth2Login()}>Sign up with Google</button>
 
         </div>
         <div className='text-black text-center w-1/2 mt-5 flex flex-row gap-x-3 p-5 justify-center'>

@@ -47,6 +47,8 @@ function Login() {
         return emailRegex.test(email) || phoneRegex.test(email);
     }
 
+    
+
    return (
     <div className='w-full bg-white py-16 items-center justify-center gap-6'>
         <div className='flex w-full maxw-6xl items-center gap-16 bg-white p-10 rounded flex-x-6 justify-around'>
@@ -65,7 +67,7 @@ function Login() {
                                   setError("")
                                }} 
                               className="w-1/2 border-b border-gray-300 p-2 outline-none focus:border-black focus:ring-0"/>
-                              <input type="text" placeholder='Password' value={password} onChange={(e)=>{
+                              <input type="password" placeholder='Password' value={password} onChange={(e)=>{
                                   setPassword(e.target.value)
                                   setError("")
                                }} 

@@ -1,20 +1,26 @@
 package com.vikas.User.Service.Repo;
 
 import com.vikas.User.Service.Entity.User;
+import com.vikas.User.Service.Entity.type.AuthProviderType;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
+
+import java.util.Optional;
 
 
 @Repository
 public interface userRepo extends JpaRepository<User,Long> {
 
-     boolean existsByEmail(String email);
+     User findByProviderIdAndProviderType(String providerId, AuthProviderType providerType) ;
+
+
+    boolean existsByEmail(String email);
      boolean existsByPhone(String phone);
 
-     Long getIdByEmail(String email);
-     Long getIdByPhone(String phone);
 
-     User findByEmail(String email);
+
+     Optional<User> findByEmail(String email);
      User findByPhone(String phone);
+     Optional<User> findByUserName(String username);
 
 }
