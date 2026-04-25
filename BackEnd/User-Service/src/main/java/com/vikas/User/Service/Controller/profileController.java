@@ -1,10 +1,10 @@
 package com.vikas.User.Service.Controller;
 
 
-import com.vikas.User.Service.Model.EmailUpdateDTO;
-import com.vikas.User.Service.Model.PasswordUpdateDTO;
-import com.vikas.User.Service.Model.Profile;
-import com.vikas.User.Service.Model.ProfileUpdateDTO;
+import com.vikas.User.Service.Entity.EmailUpdateDTO;
+import com.vikas.User.Service.Entity.PasswordUpdateDTO;
+import com.vikas.User.Service.Entity.Profile;
+import com.vikas.User.Service.Entity.ProfileUpdateDTO;
 import com.vikas.User.Service.Service.profileService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;

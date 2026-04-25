@@ -1,10 +1,9 @@
-package com.vikas.User.Service.Model;
+package com.vikas.User.Service.Entity;
 
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.Generated;
 import lombok.NoArgsConstructor;
 
 

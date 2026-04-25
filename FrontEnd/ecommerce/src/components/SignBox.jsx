@@ -42,7 +42,7 @@ function SignBox() {
          })
          .catch((err)=>{
             console.log(err);
-            setError(err);
+            if(err.responmse)
          })
     }
 

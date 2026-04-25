@@ -1,6 +1,6 @@
 package com.vikas.User.Service.Repo;
 
-import com.vikas.User.Service.Model.User;
+import com.vikas.User.Service.Entity.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

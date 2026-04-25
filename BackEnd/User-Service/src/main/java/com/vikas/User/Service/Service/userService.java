@@ -1,7 +1,7 @@
 package com.vikas.User.Service.Service;
 
-import com.vikas.User.Service.Model.User;
-import com.vikas.User.Service.Model.loginDTO;
+import com.vikas.User.Service.Entity.User;
+import com.vikas.User.Service.Entity.loginDTO;
 import com.vikas.User.Service.Repo.userRepo;
 import com.vikas.User.Service.util.JwtUtil;
 import org.springframework.beans.factory.annotation.Autowired;

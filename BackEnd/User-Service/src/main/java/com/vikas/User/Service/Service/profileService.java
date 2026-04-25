@@ -1,19 +1,15 @@
 package com.vikas.User.Service.Service;
 
 
-import com.vikas.User.Service.Model.EmailUpdateDTO;
-import com.vikas.User.Service.Model.PasswordUpdateDTO;
-import com.vikas.User.Service.Model.Profile;
-import com.vikas.User.Service.Model.ProfileUpdateDTO;
+import com.vikas.User.Service.Entity.EmailUpdateDTO;
+import com.vikas.User.Service.Entity.PasswordUpdateDTO;
+import com.vikas.User.Service.Entity.Profile;
+import com.vikas.User.Service.Entity.ProfileUpdateDTO;
 import com.vikas.User.Service.Repo.profileRepo;
 import com.vikas.User.Service.exception.ResourceNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.ResponseStatus;
-
-import java.util.Optional;
 
 @Service
 public class profileService {

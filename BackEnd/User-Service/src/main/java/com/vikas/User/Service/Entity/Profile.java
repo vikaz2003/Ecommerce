@@ -1,4 +1,4 @@
-package com.vikas.User.Service.Model;
+package com.vikas.User.Service.Entity;
 
 
 import jakarta.persistence.*;

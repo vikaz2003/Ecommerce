@@ -1,8 +1,8 @@
 package com.vikas.User.Service.Controller;
 
 
-import com.vikas.User.Service.Model.User;
-import com.vikas.User.Service.Model.loginDTO;
+import com.vikas.User.Service.Entity.User;
+import com.vikas.User.Service.Entity.loginDTO;
 import com.vikas.User.Service.Service.userService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;

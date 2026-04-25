@@ -1,5 +1,4 @@
-package com.vikas.User.Service.Model;
-
+package com.vikas.User.Service.Entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -8,10 +7,7 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class loginDTO {
-
-
+public class EmailUpdateDTO {
     private String email;
-    private String password;
-    private String phone;
 }
+
