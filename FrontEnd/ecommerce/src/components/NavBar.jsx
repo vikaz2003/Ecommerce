@@ -1,14 +1,22 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import SearchIcon from '@mui/icons-material/Search';
 import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import { BsCart3 } from "react-icons/bs";
 import { FaRegHeart } from "react-icons/fa";
 import { RiAccountPinCircleLine } from "react-icons/ri";
-
+import axios from 'axios';
+import { useDispatch ,useSelector} from 'react-redux';
 
 function NavBar() {
     const [text,setText]=useState('')
+
+    
+    const user = useSelector((state) => state.auth.user);
+    console.log(user)
+
+
+
   return (
     <div className='w-full h-18 flex border-gray-300 flex-row items-center bg-white border-b px-6'>
         <div >
@@ -18,7 +26,12 @@ function NavBar() {
             <NavLink to='/' className='text-black'>Home</NavLink>
             <NavLink to='/contact' className='text-black'>Contact</NavLink>
             <NavLink to='/about' className='text-black'>About</NavLink>
+             {!user && (
             <NavLink className='text-black' to='/signup'>Sign Up</NavLink>
+             )}
+             {user && (
+                 <NavLink className='text-black' to='/logout'>Logout</NavLink>
+             )}
         </div>
         <div className='flex flex-row gap-4 items-center ml-45'>
              <div className='bg-gray-200 flex p-2  gap-4 mx-4 my-auto items-center text-m w-65 rounded-md '>

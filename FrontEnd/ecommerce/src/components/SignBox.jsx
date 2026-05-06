@@ -51,7 +51,8 @@ function SignBox() {
     }
 
     const oAuth2Login=(e)=>{
-        console.log("Clicked ")
+        console.log("Clicked")
+        window.location.href = "http://localhost:8080/oauth2/authorization/google";
     }
 
 
@@ -109,12 +110,12 @@ function SignBox() {
              className="w-5 h-5"
          />
 
-        <button className="text-sm" onClick={()=>oAuth2Login()}>Sign up with Google</button>
+        <button className="text-sm cursor-pointer" onClick={()=>oAuth2Login()}>Sign up with Google</button>
 
         </div>
         <div className='text-black text-center w-1/2 mt-5 flex flex-row gap-x-3 p-5 justify-center'>
              <p>Already have Account?</p>
-             <Link to='/login' className='border-b border-gray-400'>
+             <Link to='/login' className='border-b border-gray-400 cursor-pointer  hover:text-red-800'>
                  Log in 
              </Link>
         </div>

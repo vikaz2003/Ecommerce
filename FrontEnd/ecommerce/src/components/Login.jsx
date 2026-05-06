@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import axios from 'axios';
 import {useNavigate} from 'react-router-dom'
+import {useDispatch} from 'react-redux'
+import { login } from '../store/authSlice';
 
 function Login() {
 
@@ -9,6 +11,8 @@ function Login() {
    const [error,setError]=useState();
 
    const navigate=useNavigate()
+   const dispatch=useDispatch()
+
    const handleSubmit=(e)=>{
       e.preventDefault();
       console.log("clicked");
@@ -26,10 +30,19 @@ function Login() {
       setError("")
       axios.post("http://localhost:8080/api/user/login",{email,password})
       .then((res)=>{
-            const token=res.data;
-            localStorage.setItem("token",token)
+            console.log(res.data);
+            const responseData=res.data;
+            const token=responseData.token??responseData;
 
-            navigate('/')
+            const user=responseData.id??null;
+            console.log(user+" "+token)
+
+            dispatch(login({user,token}))
+            navigate("/")
+         
+
+
+          
 
       })
       .catch((err)=>{

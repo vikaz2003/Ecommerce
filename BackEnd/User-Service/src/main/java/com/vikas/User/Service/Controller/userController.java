@@ -29,6 +29,11 @@ public class userController {
         return authService.login(info);
     }
 
+    @GetMapping("/me")
+    public ResponseEntity<?> getCurrentUser(String token){
+        
+    }
+
 
 
 

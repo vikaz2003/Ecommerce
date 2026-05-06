@@ -89,7 +89,14 @@ public class AuthService {
                 repo.save(user);
 
             }
+        }else{
+            user=emailUser;
+            user.setProviderId(providerId);
+            user.setProviderType(providerType);
+            repo.save(user);
         }
+        LoginResponseDto loginResponseDto=new LoginResponseDto(user.getId(),jwtUtil.generateToken(user.getId()));
+        return ResponseEntity.ok(loginResponseDto);
 
     }
 

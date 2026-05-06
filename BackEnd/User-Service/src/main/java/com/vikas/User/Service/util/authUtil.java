@@ -29,7 +29,7 @@ public class authUtil {
          String providerId=switch(registrationId.toLowerCase()){
              case "google" -> user.getAttribute("sub");
              case "github" -> user.getAttribute("id").toString();
-             default -> throw new IllformedLocaleException("Unsupported OAuth2 provider "+registrationId)
+             default -> throw new IllformedLocaleException("Unsupported OAuth2 provider "+registrationId);
          };
          if(providerId==null||providerId.isBlank()){
              log.error("Unable to determine the providerId for provider: {}",registrationId);
